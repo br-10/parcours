@@ -6,7 +6,7 @@ const Link = ({ children, to, ...other }) => {
   const internal = /^\/(?!\/)/.test(to)
  console.log(other.color)
  console.log(to)
- const color = "red"
+ const color = "black"
   if (internal) {
     return (
       <GatsbyLink style={{ color:`${color}`}} to={to} {...other}>

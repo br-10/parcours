@@ -1,20 +1,19 @@
 import React from 'react'
-import Layout from '../components/Layout'
-import RFenster from '../components/rfenster'
-import {Flex,Box,Text,Heading} from '@chakra-ui/react'
+
+import {Box,Heading} from '@chakra-ui/react'
 
 
 const RotesFenster = () =>{
     return(
         <Box>
-          <Heading>
+          <Heading variant="titel" pl="4">
               Das rote Fenster. Von Karl Hartmann
           </Heading>
 
            <RFenster />
 
         </Box>
-    
+
     )
 }
 export default RotesFenster

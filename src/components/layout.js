@@ -1,16 +1,17 @@
 import React from 'react'
-import {Flex,Box} from '@chakra-ui/react'
+import {Box,Button} from '@chakra-ui/react'
 //import {Fonts} from './fonts'
-import {animated,useSpring} from 'react-spring'
+//import {animated,useSpring} from 'react-spring'
 import Header from './header'
-import { FaInstagram,FaFacebook } from 'react-icons/fa'
+//import { FaInstagram,FaFacebook } from 'react-icons/fa'
 //import LinksBild from './streifen_links.gif'
 //import RechtsBild from './streifen_rechts.gif'
 import "@fontsource/roboto/500.css" // Weight 500.
-import "@fontsource/roboto/500.css" // Weight 500.
+//import "@fontsource/roboto/600.css" // Weight 500.
 import "@fontsource/roboto/300.css" // Weight 500.
 //import "@fontsource/roboto/900-italic.css" // Italic variant.
-import {useStaticQuery,graphql} from 'gatsby'
+import {useStaticQuery,graphql, navigate} from 'gatsby'
+import {animated, config, useSpring} from 'react-spring'
 
 // const Heading = {
 //   // The styles all button have in common
@@ -251,6 +252,7 @@ import {useStaticQuery,graphql} from 'gatsby'
 
 
 const Layout = ({ children }) => {
+  const props=useSpring({to:{opacity:1},from:{opacity:0},config:config.slow})
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -262,24 +264,16 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <Box margin="auto" maxW="960px" overflow="hidden">
+     
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <Flex      
-          margin="0 auto"
-          maxWidth= "1200"
-          padding="0 1.0875rem 1.45rem"
-          flexDirection="column"
-         
-          background="transparent"
-      >
-        {/* <PortalManager zIndex={portalZIndex}>{element}</PortalManager> */}
-        <main>{children}</main>
-        <Box 
-         position="block"
-         bottom="0"
-        minHeight="100"
-        as="footer">
-         
+      <Box >
+      
+    <animated.div style={props}>
+      {children}
+      </animated.div>  
+    
+        
         
          <Box>
          © {new Date().getFullYear()},
@@ -288,9 +282,9 @@ const Layout = ({ children }) => {
          </Box>
          
         </Box>
-      </Flex>
+       
 
-    </>
+    </Box>
   )
 }
 

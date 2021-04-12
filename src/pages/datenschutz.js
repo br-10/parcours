@@ -1,18 +1,31 @@
 
 import SEO from '../components/seo'
-import {Heading,Text,Box,Flex, extendTheme} from '@chakra-ui/react'
-import Link from '../components/Link'
+import {Heading,Text,Box,Flex,Button} from '@chakra-ui/react'
+
 import React from 'react'
+import { navigate } from 'gatsby-link'
 const Datenschutz=()=>{
+
+const Control = () =>{
+  return(
+    <Box variant="outline" onClick={()=>navigate("/")} position="fixed" zIndex="300" right="0" top="50vh">
+    <Button>
+     back
+    </Button>
+    </Box>
+  )
+}  
+
 return(
 <Flex flexDirection="column">
 
 <SEO title="Datenschutz" description="Die Datenschutzbestimmungen des Vereins" />
+<Control />
 <Box width="100%">
 
 <Heading variant="titel" as="h1">Datenschutz</Heading> 
 
-<Text variant="solid" variant="solid">
+<Text variant="solid">
 
 <strong>E-Mail:</strong><br/> <span>kontakt@kulturnetz-oberes-mittelrheintal.org </span> <br/>
 <strong>Datenschutzbeauftragte</strong>:<br/> René Broich<br/>

@@ -1,4 +1,4 @@
-import { ChakraProvider,Box,extendTheme } from '@chakra-ui/react'
+import { ChakraProvider,extendTheme } from '@chakra-ui/react'
 import React from 'react'
 import Layout from './components/layout'
 
@@ -21,7 +21,7 @@ const Heading={
           mt:3,
           letterSpacing:'.09rem',
           textTransform:'uppercase',  
-          fontSize:"2xl"
+          fontSize:["1xl","2xl"]
       },
     },
   
@@ -34,7 +34,7 @@ const Button={
     outline: {
       background:'transparent',
       p:2,
-      border:'1px solid black',
+      border:'1px solid green',
       fontSize:"sm",
       fontWeight:100,
       
@@ -43,10 +43,26 @@ const Button={
     },
   }
 }
+
+const Box={
+  baseStyle: {
+    color:"gray.800",
+ 
+    fontFamily:'Roboto, sans-serif'
+},
+variants:{
+  ojfit:{
+    objectFit:"contain",
+   
+    height:"700px",
+    overflow:"scroll-y"
+  }
+}
+}
 const Text={
     baseStyle: {
         color:"gray.800",
-     
+         fontSize:"xl",
         fontFamily:'Roboto, sans-serif'
     },
     variants:{
@@ -54,11 +70,22 @@ const Text={
         mb:"2",
           fontSize:["md","lg","1xl","1xl"],
           color:"gray.800",
+          fontWeight: "300"
       },
-      annonce:{
+      bildtext:{
         mb:"2",
           fontSize:["sm"],
-          color:'red',
+          color:'tail',
+      },
+      zitat:{
+        m:"4",
+          fontSize:["1xl","2xl","3xl"],
+          color:'gray.900',
+      },
+      titel:{
+        mb:"2",
+          fontSize:["lg","2xl","3xl"],
+          color:'balack',
       },
   },
 }
@@ -92,17 +119,20 @@ const theme= extendTheme({
      components:{
       Text,
       Heading,
-      Button
+      Button,
+      Box
      },
     })
 
 export const wrapPageElement = ({ element }) => {
   return (
-    <Layout>
+    
     <ChakraProvider theme={theme} resetCSS>
+      <Layout>
      {element}
+     </Layout>
     </ChakraProvider>
-    </Layout>
+  
   
   )
 }
