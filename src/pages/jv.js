@@ -18,9 +18,10 @@ const JV = () => {
         clearInterval(meinInterval)
         return
     }
-    if(index>daten.length-1) {
+    if(index>daten.length-3) {
         clearInterval(meinInterval)
-        setIndex(-1)
+        setIndex(0)
+        return
     }
       meinInterval= setInterval(()=>{
        setIndex(index+1)
@@ -28,7 +29,7 @@ const JV = () => {
       return ()=>clearInterval(meinInterval)
     },[index,stop])
 
-   const Tue=({jahr,monat,item})=> {
+   const Tue=({jahr,monat="",item=""})=> {
     if(jahr) setJahr(jahr)
     //sconst props=useSpring({from:{opacity:0},to:{opacity:1}})
     
@@ -47,6 +48,7 @@ const JV = () => {
        
 
          } 
+       
         </Box> 
        
        )

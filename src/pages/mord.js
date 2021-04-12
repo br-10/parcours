@@ -48,7 +48,7 @@ useEffect(()=>{
     setAlle(pA[1]+" "+pA[0]+" aus "+pArr[1]+" | "+alle)
     setIndex(ind=>ind+1)
     
-  },1000)
+  },1600)
   }
   else{
     setIndex(1)
@@ -60,9 +60,9 @@ useEffect(()=>{
 
 const Pers =({item})=>{
   
-  const props = useSpring({from:{opacity:0,color:`purple`},to:{opacity:1,width:`100vw`,color:`black`},config:{duration:2000}})
+ //const props = useSpring({from:{opacity:0,color:`purple`},to:{opacity:1,width:`100vw`,color:`black`},config:{duration:2000}})
   let pArr = item.split(':')
-  const mprops = useSpring({from:{opacity:0,color:`purple`},to:{opacity:1,width:`100vw`,color:`gray`},config:{duration:2000}})
+  //const mprops = useSpring({from:{opacity:0,color:`purple`},to:{opacity:1,width:`100vw`,color:`gray`},config:{duration:2000}})
    
   return (
     <Box mb="5">
