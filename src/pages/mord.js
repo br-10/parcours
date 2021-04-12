@@ -29,8 +29,8 @@ const MText=({alle})=>{
 
 
 const  Tarea = () => {
- 
-const mt = mytext.replace(/&nbsp;/g," ")
+const mtt = mytext.mytext
+const mt = mtt.replace(/&nbsp;/g," ")
 const pers= mt.split('|')
 const [person]=useState(pers)
 const [ind,setIndex]=useState(1)
