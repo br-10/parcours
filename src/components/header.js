@@ -17,7 +17,7 @@ const Header = ({ siteTitle,location}) => {
       pl="3"
       pt="2"
       display="flex"
-      justifyContent={typeof Window && window.location.pathname==="/"?'left':'center'}
+      justifyContent={typeof window && window.location.pathname==="/"?'left':'center'}
       alignItems="center"
       width="98%"
       maxWidth="960px"
