@@ -10,7 +10,7 @@ const RotesFenster = () =>{
               Das rote Fenster. Von Karl Hartmann
           </Heading>
 
-           <RFenster />
+         
 
         </Box>
 
