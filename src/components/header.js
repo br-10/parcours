@@ -10,14 +10,14 @@ import {useSpring, animated} from 'react-spring'
 const Header = ({ siteTitle,location}) => {
   const props=useSpring({from:{fontSize:'0px',letterSpacing:'0rem',fontWeight:100},to:{paddingLeft:5,fontSize:'50px',letterSpacing:'0.19rem',fontWeight:900},config:{duration:1000}})
  
-  
+  const isBrowser = typeof window !== "undefined"
   return(
   
     <Box as="header"
       pl="3"
       pt="2"
       display="flex"
-      justifyContent={typeof window && window.location.pathname==="/"?'left':'center'}
+      justifyContent={isBrowser && window.location.pathname==="/"?'left':'center'}
       alignItems="center"
       width="98%"
       maxWidth="960px"
