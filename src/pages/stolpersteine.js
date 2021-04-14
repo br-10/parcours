@@ -1,6 +1,6 @@
 import React from 'react'
 import {HStack,VStack,Flex,Box,AspectRatio} from '@chakra-ui/react'
-
+import Audio from '../components/Audio'
 
 const StolpersteinVideos =()=>{
     return(
@@ -22,7 +22,11 @@ const StolpersteinVideos =()=>{
   />
 </Box>
 </HStack>
+
 <VStack>
+  <Box>
+    <Audio audio="Reichspogromnacht.mp3" />
+  </Box>
 <Box>
                
                 <p>Bild von Keber</p>

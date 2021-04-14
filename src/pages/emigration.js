@@ -1,8 +1,17 @@
-import React from 'react'
+import React, {useEffect,useState} from 'react'
 import {Text,Heading,Flex,Box} from '@chakra-ui/react'
 import {StaticImage} from 'gatsby-plugin-image'
+import {useSpring,animated} from 'react-spring'
+
 
 const Emigration = () => {
+    const [props, set, stop] = useSpring(() => ({opacity: 1}))
+    //const [toggle,setToggle]= useState(false)
+useEffect(()=>{
+    console.log(props)
+    console.log(set)
+})
+
     return(
         <Flex p="3" flexDirection={["column","colum","row"]}>
             <Box mt={["50","50","250"]} mr="7">
@@ -11,7 +20,7 @@ const Emigration = () => {
   
               </Box>  
 
-<Box >
+<animated.div style={props}>
 <Text variant="zitat">
 
 „In diesem Dorf haben wir nichts zu befürchten“
@@ -107,7 +116,7 @@ in Rheinböllen zurücklassen muss.
 
 
             
-</Box>
+</animated.div>
 </Flex>
     )
 

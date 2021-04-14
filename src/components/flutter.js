@@ -43,11 +43,12 @@ function Flutter() {
       <Box p="0" m="0" width="100%"><Link to="/page-2"><Text fontWeight="500" p="0" m="0" fontSize={[18,23,40]}>Tradition + Architektur</Text></Link></Box>
       <Box p="0" m="0" width="100%"><Link to="/p1"><Text fontWeight="500" p="0" m="0" fontSize={[18,23,40]}>künstlerische Aufarbeitung Friedhelm Fries</Text></Link></Box>
       <Box p="0" m="0" width="100%"><Link to="/p3"><Text fontWeight="500" p="0" m="0" fontSize={[18,23,40]}>Zeitzeugen des Holocaust</Text></Link></Box>
-      <Box p="0" m="0" width="100%"><Link to="/p4"><Text fontWeight="500" p="0" m="0" fontSize={[18,23,40]}>Stolpersteine</Text></Link></Box>
+      <Box p="0" m="0" width="100%"><Link to="/stolpersteine"><Text fontWeight="500" p="0" m="0" fontSize={[18,23,40]}>Stolpersteine</Text></Link></Box>
       <Box p="0" m="0" width="100%"><Link to="/page-2"><Text fontWeight="500" p="0" m="0" fontSize={[18,23,40]}>Hadamar – Euthanasie des NS-Regimes</Text></Link></Box>
-      <Box p="0" m="0" width="100%"><Link to="/friedhoefe"><Text fontWeight="500" p="0" m="0" fontSize={[18,23,40]}>Friedhöfe</Text></Link></Box>
+      <Box p="0" m="0" width="100%"><Link to="/friedhoefe"><Text fontWeight="500" p="0" m="0" fontSize={[ 18,23,40]}>Friedhöfe</Text></Link></Box>
       <Box p="0" m="0" width="100%"><Link to="/emigration"><Text fontWeight="500" p="0" m="0" fontSize={[18,23,40]}>Emigration</Text></Link></Box>
       <Box p="0" m="0" width="100%"><Link to="/p4"><Text fontWeight="500" p="0" m="0" fontSize={[18,23,40]}>künstlerische Aufarbeitung Michael Apitz</Text></Link></Box>
+      <Box p="0" m="0" width="100%"><Link to="/mord"><Text fontWeight="500" p="0" m="0" fontSize={[18,23,40]}>Von der Diskriminierung zum Mord</Text></Link></Box>
      
     </Trail>
     </Box>
